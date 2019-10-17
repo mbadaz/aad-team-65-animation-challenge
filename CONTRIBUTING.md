@@ -4,8 +4,12 @@
 - Fork this repository - [How to fork a repository](https://services.github.com/on-demand/intro-to-github/create-pull-request)
 - Clone the forked repository into local space
 - Open an issue to indicate the task you want to work on e.g Adding SharedElementTransitions scenario
-
+- Create a new branch for your scenario and name it accordingly e.g Animated-Like-Button.
+- Create a new package for your scenario and start coding
+- Add the name of your scenario in the "showcases" string-array in the strings.xml file.
+- Fulfill all the "TODOS" in MainActivity.
 - Optional - You can add comments at the start of the file, if you want to share something, like any complex logic you might have added.
+- CHECK THAT THE PROJECT SUCCESSFULLY BUILDS BEFORE COMMITING!
 - Add and commit the changes. (Please do not make changes in any other file, but if you want to work on bug/improvement then also indicate the issue first)
 - Generate a Pull Request (Optional: add problem name in the title and what you worked on in the description)
 - That's it!
