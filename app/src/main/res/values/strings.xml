@@ -1,7 +1,4 @@
 <resources>
-    <string name="app_name">AAD-TEAM-65 Animators Showcase</string>
-
-    <string-array name="showcases">
-
-    </string-array>
+    <string name="app_name">aad-team-65-animation-challenge</string>
+    <string name="title_activity_splash">SplashActivity</string>
 </resources>
