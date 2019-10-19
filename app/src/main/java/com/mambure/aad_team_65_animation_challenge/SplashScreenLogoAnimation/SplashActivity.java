@@ -5,7 +5,6 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 
 import com.mambure.aad_team_65_animation_challenge.R;
-import com.mambure.aad_team_65_animation_challenge.SplashScreenLogoAnimation.MainActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_spash);
         startBtn = findViewById(R.id.container);
-        TextView title = (TextView)findViewById(R.id.app_name);
+        TextView title = findViewById(R.id.app_name);
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/font_name.ttf");
         title.setTypeface(custom_font);
         startBtn.setVisibility(View.GONE);
@@ -47,7 +46,7 @@ public class SplashActivity extends AppCompatActivity {
         findViewById(R.id.container).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                startActivity(new Intent(SplashActivity.this, HomeActivity.class));
                 finish();
             }
         });

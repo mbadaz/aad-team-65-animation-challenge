@@ -15,7 +15,7 @@ import com.mambure.aad_team_65_animation_challenge.SplashScreenLogoAnimation.ada
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     UserAdapter userAdapter;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
         recyclerView = findViewById(R.id.user_list);
 
         users.add(new Users());
