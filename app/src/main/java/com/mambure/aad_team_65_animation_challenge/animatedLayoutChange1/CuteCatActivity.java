@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.transition.Slide;
 import android.transition.Transition;
 import android.transition.TransitionManager;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
 import android.widget.ImageView;
@@ -23,7 +25,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class CuteCatActivity extends AppCompatActivity {
-
+    private static final String TAG = CuteCatActivity.class.getSimpleName();
     @BindView(R.id.imgCat)
     ImageView catImage;
     @BindView(R.id.progressBar)
@@ -45,12 +47,24 @@ public class CuteCatActivity extends AppCompatActivity {
 
 
     private void loadImage(String url) {
+        progressBar.setVisibility(View.VISIBLE);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            Transition transition = new Slide(Gravity.RIGHT);
+            transition.setDuration(500);
+            transition.setInterpolator(new OvershootInterpolator());
+            TransitionManager.beginDelayedTransition(containerLayout, transition);
+        }
+
+        catImage.setVisibility( View.GONE);
+
         Target target = new Target() {
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
+                Log.d(TAG, "Loading Image; " + bitmap.toString());
                 progressBar.setVisibility(View.INVISIBLE);
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                    Transition transition = new Slide();
+                    Transition transition = new Slide(Gravity.LEFT);
                     transition.setDuration(500);
                     transition.setInterpolator(new OvershootInterpolator());
                     TransitionManager.beginDelayedTransition(containerLayout, transition);
@@ -71,11 +85,7 @@ public class CuteCatActivity extends AppCompatActivity {
             }
         };
 
-        progressBar.setVisibility(View.VISIBLE);
-
-        Picasso.get().load(url).noPlaceholder().into(target);
-//        Glide.with(this).
-//                load(url).into(catImage);
+        Picasso.get().load(url).noPlaceholder().resize(400, 600).centerInside().into(target);
     }
 
     @OnClick(R.id.btnGetCat)

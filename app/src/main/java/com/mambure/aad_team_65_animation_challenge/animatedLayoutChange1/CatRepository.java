@@ -8,6 +8,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -27,10 +28,9 @@ public class CatRepository {
             Throwable::printStackTrace
     );
 
-
-
     CatRepository(Context context) {
         requestQueue = Volley.newRequestQueue(context);
+        VolleyLog.DEBUG = true;
         catImageUrlLiveData = new MutableLiveData<>();
     }
 
@@ -38,7 +38,6 @@ public class CatRepository {
         requestQueue.add(request);
         return catImageUrlLiveData;
     }
-
 
     private void parseJson(JSONArray jsonArray) {
         try {
@@ -48,6 +47,7 @@ public class CatRepository {
 
         } catch (JSONException e) {
             e.printStackTrace();
+            getCatImage();
         }
     }
 }

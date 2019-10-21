@@ -4,5 +4,6 @@
 
     <string-array name="showcases">
         <item>Logo animation </item>
+        <item>Animated Layout Change 1</item>
     </string-array>
 </resources>
