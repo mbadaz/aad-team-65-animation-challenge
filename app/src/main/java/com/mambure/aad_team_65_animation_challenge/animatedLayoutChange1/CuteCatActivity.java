@@ -25,11 +25,11 @@ import butterknife.OnClick;
 public class CuteCatActivity extends AppCompatActivity {
 
     @BindView(R.id.imgCat)
-    private ImageView catImage;
+    ImageView catImage;
     @BindView(R.id.progressBar)
-    private ProgressBar progressBar;
+    ProgressBar progressBar;
     @BindView(R.id.root_layout)
-    private ConstraintLayout containerLayout;
+    ConstraintLayout containerLayout;
     private CatRepository catRepository;
 
 

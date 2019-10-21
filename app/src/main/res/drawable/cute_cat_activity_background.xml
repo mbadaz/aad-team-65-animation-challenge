@@ -3,7 +3,6 @@
 
     <gradient
         android:startColor="@color/colorButtonGradientENd"
-        android:endColor="@color/colorButtonGradientStart"
-        android:angle=""/>
+        android:endColor="@color/colorButtonGradientStart" />
 
 </shape>
