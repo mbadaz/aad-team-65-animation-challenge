@@ -4,4 +4,10 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="btnColor">#3107EE</color>
+    <color name="overlay_gradient_start">#70000000</color>
+    <color name="colorButtonGradientStart">#880E4F</color>
+    <color name="colorButtonGradientENd">#B71C1C</color>
+
+
+
 </resources>
