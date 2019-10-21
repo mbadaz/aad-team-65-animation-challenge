@@ -3,6 +3,6 @@
     <string name="title_activity_splash">SplashActivity</string>
 
     <string-array name="showcases">
-<item>Logo animation </item>
+        <item>Logo animation </item>
     </string-array>
 </resources>
