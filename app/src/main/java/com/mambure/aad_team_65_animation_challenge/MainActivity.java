@@ -12,14 +12,14 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    @BindView(R.id.listView_showcases) ListView listView;
+    @BindView(R.id.listView_showcases)
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        listView.setOnItemClickListener(this);
     }
 
 
