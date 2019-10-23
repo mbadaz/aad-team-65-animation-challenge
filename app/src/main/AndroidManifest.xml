@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".AnimatedCallAnswer.CallActivity">
+
+
         <activity android:name=".animatedLayoutChange1.CuteCatActivity"
         tools:ignore="GoogleAppIndexingWarning"/>
         <activity
@@ -22,6 +25,7 @@
         <activity android:name=".SplashScreenLogoAnimation.SplashActivity"/>
 
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,10 +33,21 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".SplashScreenLogoAnimation.HomeActivity"
+            android:label="@string/title_activity_splash" />
+        <activity
+            android:name=".SplashScreenLogoAnimation.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+
         <activity android:name=".SharedElementTransitions.activities.SharedElementListActivity" />
         <activity
             android:name=".SharedElementTransitions.activities.SharedElementDetailActivity"
             android:parentActivityName=".SharedElementTransitions.activities.SharedElementListActivity" />
+
     </application>
 
 </manifest>
