@@ -8,6 +8,7 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.mambure.aad_team_65_animation_challenge.SharedElementTransitions.activities.SharedElementListActivity;
 import com.mambure.aad_team_65_animation_challenge.SplashScreenLogoAnimation.SplashActivity;
 import com.mambure.aad_team_65_animation_challenge.animatedLayoutChange1.CuteCatActivity;
 
@@ -16,7 +17,8 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    @BindView(R.id.listView_showcases) ListView listView;
+    @BindView(R.id.listView_showcases)
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             case "Animated Layout Change 1":
                 intent = new Intent(this, CuteCatActivity.class);
+                break;
+            case "Shared Element Transitions":
+                intent = new Intent(this, SharedElementListActivity.class);
                 break;
 
         }
