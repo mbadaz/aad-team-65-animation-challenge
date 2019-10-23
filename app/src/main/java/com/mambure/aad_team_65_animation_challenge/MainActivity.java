@@ -8,6 +8,7 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.mambure.aad_team_65_animation_challenge.AnimatedCallAnswer.CallActivity;
 import com.mambure.aad_team_65_animation_challenge.SharedElementTransitions.activities.SharedElementListActivity;
 import com.mambure.aad_team_65_animation_challenge.SplashScreenLogoAnimation.SplashActivity;
 import com.mambure.aad_team_65_animation_challenge.animatedLayoutChange1.CuteCatActivity;
@@ -45,7 +46,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case "Shared Element Transitions":
                 intent = new Intent(this, SharedElementListActivity.class);
                 break;
-
+            case "Animated Call Answer":
+                intent = new Intent(this, CallActivity.class);
+                break;
         }
         startActivity(intent);
     }
