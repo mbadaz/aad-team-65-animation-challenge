@@ -7,5 +7,6 @@
     <string-array name="showcases">
         <item>Logo animation </item>
         <item>Recycle view Right to left animation </item>
+        <item>Shared Element Transitions</item>
     </string-array>
 </resources>
