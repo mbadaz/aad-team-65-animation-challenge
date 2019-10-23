@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">aad-team-65-animation-challenge</string>
     <string name="title_activity_splash">SplashActivity</string>
+
     <string name="btn_call_text">Play</string>
+
+    <string name="friend_fullname">Friend fullname</string>
+    <string name="status">status</string>
 
     <string-array name="showcases">
         <item>Logo animation </item>
+        <item>Animated Layout Change 1</item>
+        <item>Shared Element Transitions</item>
     </string-array>
 </resources>

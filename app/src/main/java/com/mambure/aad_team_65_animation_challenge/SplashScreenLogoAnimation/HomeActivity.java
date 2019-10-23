@@ -1,8 +1,10 @@
 package com.mambure.aad_team_65_animation_challenge.SplashScreenLogoAnimation;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityOptionsCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -30,10 +32,18 @@ public class HomeActivity extends AppCompatActivity {
         users.add(new Users());
         users.add(new Users());
         users.add(new Users());
+        users.add(new Users());
+        users.add(new Users());
+        users.add(new Users());
+        users.add(new Users());
+
 
         userAdapter = new UserAdapter(this, users, new UserAdapter.UserAdapterAdapterListener() {
             @Override
             public void onUserClicked(Users users) {
+               // ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this,imageView,"imageMain");
+                //Intent in = new Intent(this,DetailsActivity.class);
+                //startActivity(in,activityOptionsCompat.toBundle());
 
             }
         });
