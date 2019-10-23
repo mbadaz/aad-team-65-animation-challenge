@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".AnimatedCallAnswer.CallActivity">
+        <activity android:name=".AnimatedCallAnswer.CallActivity"/>
 
 
         <activity android:name=".animatedLayoutChange1.CuteCatActivity"
@@ -31,15 +31,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".SplashScreenLogoAnimation.HomeActivity"
-            android:label="@string/title_activity_splash" />
-        <activity
-            android:name=".SplashScreenLogoAnimation.SplashActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
         </activity>
 
 
