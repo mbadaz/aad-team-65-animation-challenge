@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="btnColor">#3107EE</color>
+
+    <color name="ripple_material_color">#1f000000</color>
+
     <color name="white">#FDFCFC</color>
     <color name="pressed_color">#ff0</color>
 </resources>

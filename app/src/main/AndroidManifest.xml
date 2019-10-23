@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.mambure.aad_team_65_animation_challenge">
 
     <application
@@ -8,21 +9,29 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".SplashScreenLogoAnimation.HomeActivity"
-            android:label="@string/title_activity_splash"
-            >
+            android:label="@string/title_activity_splash"></activity>
+
+        <activity
+            android:name=".SplashScreenLogoAnimation.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
-        <activity android:name=".SplashScreenLogoAnimation.SplashActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".SharedElementTransitions.activities.SharedElementListActivity" />
+        <activity
+            android:name=".SharedElementTransitions.activities.SharedElementDetailActivity"
+            android:parentActivityName=".SharedElementTransitions.activities.SharedElementListActivity" />
     </application>
 
 </manifest>
