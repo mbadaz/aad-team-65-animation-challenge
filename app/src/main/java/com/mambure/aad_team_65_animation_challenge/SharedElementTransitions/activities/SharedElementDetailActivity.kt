@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.mambure.aad_team_65_animation_challenge.R
 import kotlinx.android.synthetic.main.activity_shared_element_detail.*
 
@@ -19,6 +20,7 @@ class SharedElementDetailActivity : AppCompatActivity() {
         Glide.with(this)
                 .load(imageId)
                 .fitCenter()
+                .apply(RequestOptions.circleCropTransform())
                 .into(image)
 
         textView.text = title
